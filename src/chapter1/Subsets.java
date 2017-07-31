@@ -36,7 +36,7 @@ public class Subsets {
     }
     
     public static void dfs(int[] S, int index, List<Integer> path, List<List<Integer>> ret) {
-    	//ȥ��
+    	//ȥ��
     	/*if(!ret.contains(path)){
     		 ret.add(new ArrayList<Integer>(path));
     	}*/
@@ -52,4 +52,27 @@ public class Subsets {
             path.remove(path.size() - 1);
         }
     }
+    /*    对于集合里面的任何一个元素，有两种可能，一种是在子集合里，另一种是不在子集合里。
+    在子集合里的话用1表示，不在的话用0表示，那么一个集合的子集合都可以用二进制表示，假设集合为{1,2,3}，
+    那么可以用下列二级制表示：000,001,010,011......共有2^n种表示。
+    http://blog.csdn.net/foreverbu/article/details/37567111
+    http://blog.csdn.net/dengqiaodey/article/details/8083123*/
+    public static ArrayList<ArrayList<Integer>> subsets2(int[] set){  
+        ArrayList<ArrayList<Integer>> allsubsets = new ArrayList<ArrayList<Integer>>();  
+        int max = 1 << set.length; //how many sub sets  
+        for(int i=0; i<max; i++){  
+            int index = 0;  
+            int k = i;  
+            ArrayList<Integer> s = new ArrayList<Integer>();  
+            while(k > 0){  
+                if((k&1) > 0){  
+                    s.add(set[index]);  
+                }  
+                k>>=1;  
+                index++;  
+            }  
+            allsubsets.add(s);  
+        }  
+        return allsubsets;  
+    }  
 }
