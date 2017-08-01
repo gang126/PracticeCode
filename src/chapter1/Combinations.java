@@ -14,7 +14,7 @@ public class Combinations {
 		}
 
 	}
-/*	ÌâÄ¿£º
+/*	ï¿½ï¿½Ä¿ï¿½ï¿½
 	Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
 	For example,
 	If n = 4 and k = 2, a solution is:
@@ -26,7 +26,7 @@ public class Combinations {
 	  [1,3],
 	  [1,4],
 	]
-	 Ìâ½â£º	 ÕâµÀÌâ¾ÍÊÇÓÃDFS(²Î¿¼Work BreakII)µÄÑ­»·µİ¹é´¦Àí×ÓÎÊÌâµÄ·½·¨½â¾ö¡£nÎªÑ­»·µÄ´ÎÊı£¬kÎªÃ¿´Î³¢ÊÔµÄ²»Í¬Êı×Ö¡£ÓÃµ½ÁË»ØËİ*/
+	 ï¿½ï¿½â£º	 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DFS(ï¿½Î¿ï¿½Work BreakII)ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½İ¹é´¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nÎªÑ­ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½kÎªÃ¿ï¿½Î³ï¿½ï¿½ÔµÄ²ï¿½Í¬ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½Ãµï¿½ï¿½Ë»ï¿½ï¿½ï¿½*/
 	public static ArrayList<ArrayList<Integer>> combination(int n, int k){
 		ArrayList<ArrayList<Integer>> res =new ArrayList<ArrayList<Integer>>();
 		ArrayList<Integer> item = new ArrayList<Integer>();
@@ -48,7 +48,7 @@ public class Combinations {
 		
 		for(int i=start; i<=n; i++){
 			item.add(i);
-			//i+1  ²»ÊÇstart+1
+			//i+1  ï¿½ï¿½ï¿½ï¿½start+1
 			DFS( n, k,i+1,item,res);
 			item.remove(item.size()-1);
 			

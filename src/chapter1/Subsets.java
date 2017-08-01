@@ -8,7 +8,7 @@ public class Subsets {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] S= {1,2,3};
+		int[] S= {1,1};
 		List<List<Integer>> ret =subsets(S);
 		
 		for(int i=0; i<ret.size(); i++){
@@ -44,9 +44,9 @@ public class Subsets {
         
         for (int i = index; i < S.length; i++) {
         	//[1,2,2] 
-        	/*if(i!=0 && S[i] == S[i-1] && i>index) {
+        	if(i!=0 && S[i] == S[i-1] && i>index) {
         		continue;
-        	}*/
+        	}
             path.add(S[i]);
             dfs(S, i + 1, path, ret);
             path.remove(path.size() - 1);
