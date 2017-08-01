@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CombinationSum {
-/*	ÌâÄ¿£º
+/*	ï¿½ï¿½Ä¿ï¿½ï¿½
 
 	Given a set of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
 
@@ -15,11 +15,13 @@ public class CombinationSum {
 	[2, 2, 3]
 	*/
 	
-/*	»¹ÊÇÀÏÎÊÌâ£¬ÓÃDFSÕÒ½â¾ö·½°¸£¬²»Í¬µãÊÇ£¬ÕâµÀÌâ£º The same repeated number may be chosen from C unlimited number of times.
+/*	é¢˜è§£ï¼š
 
-	ËùÒÔ£¬Ã¿´ÎÌø½øµÝ¹é²»ÓÃ¶¼ÍùºóÅ²Ò»¸ö£¬»¹¿ÉÒÔÀûÓÃµ±Ç°µÄÔªËØ³¢ÊÔ¡£
+	è¿˜æ˜¯è€é—®é¢˜ï¼Œç”¨DFSæ‰¾è§£å†³æ–¹æ¡ˆï¼Œä¸åŒç‚¹æ˜¯ï¼Œè¿™é“é¢˜ï¼š The same repeated number may be chosen from C unlimited number of times.
 
-	Í¬Ê±£¬ÕâµÀÌâ»¹ÒªÅÐ¶ÏÖØ¸´½â¡£ÓÃÎÒÖ®Ç°½éÉÜµÄÁ½¸ö·½·¨£º
+	æ‰€ä»¥ï¼Œæ¯æ¬¡è·³è¿›é€’å½’ä¸ç”¨éƒ½å¾€åŽæŒªä¸€ä¸ªï¼Œè¿˜å¯ä»¥åˆ©ç”¨å½“å‰çš„å…ƒç´ å°è¯•ã€‚
+
+	åŒæ—¶ï¼Œè¿™é“é¢˜è¿˜è¦åˆ¤æ–­é‡å¤è§£ã€‚ç”¨æˆ‘ä¹‹å‰ä»‹ç»çš„ä¸¤ä¸ªæ–¹æ³•ï¼š
 
 	 1.       if(i>0 && candidates[i] == candidates[i-1])//deal with dupicate
 	                 continue; 
@@ -27,7 +29,7 @@ public class CombinationSum {
 	 2.       if(!res.contains(item)) 
 	                res.add(new ArrayList<Integer>(item));   
 
-	ÕâÁ½¸ö·½·¨½â¾ö¡£*/
+	*/
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] nums={2,3,6,7};
@@ -47,7 +49,7 @@ public class CombinationSum {
 		if(nums ==null || nums.length==0){
 			return res;
 		}
-		//±£Ö¤Êý¾ÝÔ´ ÊÇ ÓÐÐòµÄ ²»ÖØ¸´£¿
+		//ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½Ô´ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½
 		Arrays.sort(nums);
 		dfs(res, path, nums, target, 0);
 		
@@ -69,7 +71,7 @@ public class CombinationSum {
 		
 		
 		for(int i=index; i<nums.length; i++){
-			//´¦ÀíÖØ¸´
+			//ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½
 			/*if(i!=0 && nums[i] == nums[i-1] && i>index){
 				continue;
 			}*/
