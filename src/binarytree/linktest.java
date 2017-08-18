@@ -5,7 +5,7 @@ public class linktest {
 		// TODO Auto-generated method stub
 		Node link = getNode();
 		 //Node relink = getreNode1(link);
-		Node relink = reverseList2(link);
+		Node relink = getreNode1(link);
 
 		System.out.println(relink.value);
 		System.out.println(relink.nextNode.value);
@@ -14,6 +14,7 @@ public class linktest {
 		/*System.out.println(relink.nextNode.nextNode.nextNode.nextNode.value);
 		System.out.println(relink.nextNode.nextNode.nextNode.nextNode.nextNode.value);
 */
+
 	}
 
 	public static Node getNode() {
