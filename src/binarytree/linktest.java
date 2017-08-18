@@ -67,6 +67,7 @@ public class linktest {
 			return head;
 		Node dummy = new Node(-1);
 		dummy.nextNode = head;
+		//Node prev = head;
 		Node prev = dummy.nextNode;
 		Node pCur = prev.nextNode;
 		//2和1进行交换      -1, 2, 1, 3, 4

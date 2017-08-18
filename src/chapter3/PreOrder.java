@@ -17,7 +17,7 @@ public class PreOrder {
 		n1.right=n3;
 		n2.left=n4;
 		n2.right=n5;
-		ArrayList<Integer> results= nonRecursion(n1);
+		ArrayList<Integer> results= divideConquer(n1);
 		for(Integer xx : results){
 			System.out.print(xx);
 		}
